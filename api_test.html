@@ -1,0 +1,30 @@
+<html>
+<head>
+<Title>API_TEST Assignment</title>
+</head>
+<body>
+<div id = "sunset">This is a div element.</div>
+
+<script>
+fetch("https://api.sunrise-sunset.org/json?lat=34.1083&lng=-117.2898&formatted=0")
+.then(response => response.json())
+.then(data => {
+const d = new Date(data.results.sunrise);
+document.getElementById("sunset").innerHTML = "Sunrise today in San Bernardino is " + d.getHours() + ':' + d.getMinutes() + ' AM';
+});
+
+//const url = "https://api.sunrise-sunset.org/json?lat=34.1083&lng=-117.2898&formatted=0";
+//function callback2(data){
+//const d = new Date(data.results.sunrise);
+//document.getElementById("sunset").innerHTML = "Sunrise today in San Bernardino is " + d.getHours() + ':' + d.getMinutes() + ' AM';}
+//function callback1(response) {
+//console.log(response);
+//const p2 = response.json();
+//p2.then(callback2);}
+//const p1 = fetch(url);
+//p1.then(callback1);
+
+</script>
+
+</body>
+</html>

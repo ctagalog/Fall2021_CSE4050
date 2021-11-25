@@ -1,0 +1,17 @@
+<p>
+JSON.parse and JSON.stringify test script
+</p>
+
+<script>
+const obj ='{"a": 55, "b": 42}';
+const parse = JSON.parse(obj);
+
+console.log(parse.a) ;//expected output 55
+console.log(parse.b); //expected output 42
+console.log(JSON.stringify({"a": 55, "b": 42})); //expected output {"a":55,"b":42}
+console.log(JSON.stringify(obj)); //expected output "{\"a\": 55, \"b\": 42}"
+
+const obj2 = {"a": 55, "b": 42};
+const s = JSON.stringify(obj2);
+console.log(s); //expected output {"a":55,"b":42}
+</script>
